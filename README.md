@@ -14,7 +14,7 @@ Open `http://127.0.0.1:8080`. The site also works by opening `index.html` direct
 
 ## Maintain
 
-- `index.html`: biography, publication entries, news, experience and metadata.
+- `index.html`: biography, publication entries, news and metadata. Career and education are summarized in the biography.
 - `assets/site.css`: desktop/mobile layout and print styles.
 - `images/avatar.jpg`: original profile portrait.
 - `images/pubs/`: original research figures. Their full images are accessible through the preview links.
