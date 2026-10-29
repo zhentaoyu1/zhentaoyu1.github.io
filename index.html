@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Zhentao Yu</title>
-  <meta name="description" content="Zhentao Yu — Algorithm Researcher at Tencent Hunyuan, working on video world models and video generation.">
+  <meta name="description" content="Zhentao Yu — Senior Researcher at Tencent Hunyuan, working on video world models and video generation.">
   <style>
     :root {
       --text: #313131;
@@ -79,7 +79,19 @@
     .content section:first-child h2 { margin-top: 0; }
     .content p { margin: 0 0 14px; }
 
-    .pub { padding: 12px 0; border-bottom: 1px dashed var(--border); }
+    .pub { display: flex; gap: 18px; align-items: flex-start; padding: 14px 0; border-bottom: 1px dashed var(--border); }
+    .pub-thumb {
+      flex: 0 0 190px; height: 112px; border-radius: 6px; overflow: hidden;
+      border: 1px solid var(--border); background: #eef3f9;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .pub-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .pub-thumb .abbr { display: none; font-weight: 700; font-size: 15px; color: #1c4578; text-align: center; line-height: 1.3; }
+    .pub-body { flex: 1; min-width: 0; }
+    .author-stats { color: var(--muted); font-size: 14px; margin: 12px 0 0; }
+    .news { list-style: none; padding: 0; margin: 0; }
+    .news li { display: flex; gap: 14px; padding: 4px 0; }
+    .news .date { flex: 0 0 64px; color: var(--muted); font-variant-numeric: tabular-nums; }
     .pub:last-child { border-bottom: none; }
     .pub-title { font-weight: 600; }
     .pub-authors { font-size: 15px; color: #444; }
@@ -111,6 +123,8 @@
       .author-links { display: inline-block; text-align: left; }
       .nav { display: none; }
       .entry { flex-direction: column; gap: 0; }
+      .pub { flex-direction: column; gap: 10px; }
+      .pub-thumb { flex: none; width: 100%; height: 170px; }
     }
   </style>
 </head>
@@ -121,6 +135,7 @@
     <a class="site-title" href="#">Zhentao Yu</a>
     <nav class="nav">
       <a href="#about">About</a>
+      <a href="#news">News</a>
       <a href="#publications">Publications</a>
       <a href="#experience">Experience</a>
       <a href="#education">Education</a>
@@ -138,7 +153,7 @@
     <div class="avatar-fallback">ZY</div>
 
     <div class="author-name">Zhentao Yu</div>
-    <p class="author-bio">Algorithm Researcher @ Tencent Hunyuan</p>
+    <p class="author-bio">Senior Researcher @ Tencent Hunyuan</p>
 
     <ul class="author-links">
       <li>
@@ -147,7 +162,7 @@
       </li>
       <li>
         <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
-        <a href="mailto:21710134@zju.edu.cn">Email</a>
+        <a href="mailto:zhentaoyu@tencent.com">Email</a>
       </li>
       <li>
         <svg viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3zm-6.8 9.6V16c0 1.9 3 3.5 6.8 3.5s6.8-1.6 6.8-3.5v-3.4L12 16.3l-6.8-3.7z"/></svg>
@@ -158,6 +173,7 @@
         <a href="https://github.com/zhentaoyu1" target="_blank" rel="noopener">GitHub</a>
       </li>
     </ul>
+    <p class="author-stats">Citations 1,900+ &middot; h-index 8</p>
   </aside>
 
   <!-- ===================== Main ===================== -->
@@ -166,7 +182,7 @@
     <section id="about">
       <h2>About Me</h2>
       <p>
-        I am an Algorithm Researcher at <b>Tencent Hunyuan</b> in Shanghai, currently working on
+        I am a Senior Researcher at <b>Tencent Hunyuan</b> in Shanghai, currently working on
         <b>interactive video world models</b> in the Video World Model Team. My research interests include
         world models, video editing, subject-driven (reference-to-video) generation, joint audio-video generation,
         and post-training of video generation models.
@@ -187,10 +203,25 @@
       </p>
     </section>
 
+    <section id="news">
+      <h2>News</h2>
+      <ul class="news">
+        <li><span class="date">2026.10</span><span><a href="https://arxiv.org/abs/2610.36729" target="_blank" rel="noopener">Hy-Nomas</a> technical report released; model weights, code and benchmark are open-sourced.</span></li>
+        <li><span class="date">2026.06</span><span>Two papers accepted to <b>ECCV 2026</b>, with Goku selected as an <b>Oral</b>.</span></li>
+        <li><span class="date">2026.05</span><span>Joined the Video World Model Team at Tencent Hunyuan.</span></li>
+        <li><span class="date">2026.02</span><span>Harmony accepted to <b>CVPR 2026</b>.</span></li>
+        <li><span class="date">2025.09</span><span>PolyVivid accepted to <b>NeurIPS 2025</b>.</span></li>
+        <li><span class="date">2025.05</span><span><a href="https://github.com/Tencent-Hunyuan/HunyuanCustom" target="_blank" rel="noopener">HunyuanCustom</a> released and open-sourced.</span></li>
+        <li><span class="date">2025.02</span><span>HunyuanPortrait accepted to <b>CVPR 2025</b>.</span></li>
+      </ul>
+    </section>
+
     <section id="publications">
       <h2>Publications</h2>
 
       <div class="pub">
+        <div class="pub-thumb"><img src="images/pubs/hy-nomas.jpg" alt="" loading="lazy" onerror="this.nextElementSibling.style.display='block';this.remove();"><span class="abbr">Tech Report<br>2026</span></div>
+        <div class="pub-body">
         <div class="pub-title">Hy-Nomas: Towards Free-form Interactive World Generation</div>
         <div class="pub-authors"><b>Tencent Hy Visual Generation Team</b></div>
         <div class="pub-venue">Technical Report, 2026</div>
@@ -199,9 +230,12 @@
           <a href="https://github.com/Tencent-Hunyuan/Hy-Nomas" target="_blank" rel="noopener">[Code]</a>
           <a href="https://huggingface.co/tencent/Hy-Nomas" target="_blank" rel="noopener">[Model]</a>
         </div>
+        </div>
       </div>
 
       <div class="pub">
+        <div class="pub-thumb"><img src="images/pubs/goku.jpg" alt="" loading="lazy" onerror="this.nextElementSibling.style.display='block';this.remove();"><span class="abbr">ECCV 2026<br>Oral</span></div>
+        <div class="pub-body">
         <div class="pub-title">Goku: A Million-Scale Universal Dataset and Benchmark for Instruction-Based Video Editing</div>
         <div class="pub-authors">Sen Liang, Cong Wang, <b>Zhentao Yu</b>, et al.</div>
         <div class="pub-venue">European Conference on Computer Vision (ECCV) 2026<span class="tag">Oral</span></div>
@@ -210,9 +244,12 @@
           <a href="https://flying-sky999.github.io/Goku.github.io/" target="_blank" rel="noopener">[Project]</a>
           <a href="https://huggingface.co/datasets/Goku-2M/GOKU-2M" target="_blank" rel="noopener">[Dataset]</a>
         </div>
+        </div>
       </div>
 
       <div class="pub">
+        <div class="pub-thumb"><img src="images/pubs/interactavatar.jpg" alt="" loading="lazy" onerror="this.nextElementSibling.style.display='block';this.remove();"><span class="abbr">ECCV 2026</span></div>
+        <div class="pub-body">
         <div class="pub-title">Making Avatars Interact: Towards Text-Driven Human-Object Interaction for Controllable Talking Avatars</div>
         <div class="pub-authors">Youliang Zhang, Zhengguang Zhou, <b>Zhentao Yu</b>, et al.</div>
         <div class="pub-venue">European Conference on Computer Vision (ECCV) 2026</div>
@@ -220,18 +257,24 @@
           <a href="https://arxiv.org/abs/2602.01538" target="_blank" rel="noopener">[Paper]</a>
           <a href="https://interactavatar.github.io/" target="_blank" rel="noopener">[Project]</a>
         </div>
+        </div>
       </div>
 
       <div class="pub">
+        <div class="pub-thumb"><img src="images/pubs/harmony.jpg" alt="" loading="lazy" onerror="this.nextElementSibling.style.display='block';this.remove();"><span class="abbr">CVPR 2026</span></div>
+        <div class="pub-body">
         <div class="pub-title">Harmony: Harmonizing Audio and Video Generation through Cross-Task Synergy</div>
         <div class="pub-authors">Teng Hu, <b>Zhentao Yu</b>, Guozhen Zhang, et al.</div>
         <div class="pub-venue">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2026</div>
         <div class="pub-links">
           <a href="https://arxiv.org/abs/2511.21579" target="_blank" rel="noopener">[Paper]</a>
         </div>
+        </div>
       </div>
 
       <div class="pub">
+        <div class="pub-thumb"><img src="images/pubs/polyvivid.jpg" alt="" loading="lazy" onerror="this.nextElementSibling.style.display='block';this.remove();"><span class="abbr">NeurIPS 2025</span></div>
+        <div class="pub-body">
         <div class="pub-title">PolyVivid: Vivid Multi-Subject Video Generation with Cross-Modal Interaction and Enhancement</div>
         <div class="pub-authors">Teng Hu, <b>Zhentao Yu</b>, Zhengguang Zhou, et al.</div>
         <div class="pub-venue">Conference on Neural Information Processing Systems (NeurIPS) 2025</div>
@@ -239,9 +282,12 @@
           <a href="https://arxiv.org/abs/2506.07848" target="_blank" rel="noopener">[Paper]</a>
           <a href="https://sjtuplayer.github.io/projects/PolyVivid" target="_blank" rel="noopener">[Project]</a>
         </div>
+        </div>
       </div>
 
       <div class="pub">
+        <div class="pub-thumb"><img src="images/pubs/hunyuancustom.jpg" alt="" loading="lazy" onerror="this.nextElementSibling.style.display='block';this.remove();"><span class="abbr">Tech Report<br>2025</span></div>
+        <div class="pub-body">
         <div class="pub-title">HunyuanCustom: A Multimodal-Driven Architecture for Customized Video Generation</div>
         <div class="pub-authors">Teng Hu, <b>Zhentao Yu</b>, Zhengguang Zhou, et al.</div>
         <div class="pub-venue">Technical Report, 2025</div>
@@ -250,9 +296,12 @@
           <a href="https://github.com/Tencent-Hunyuan/HunyuanCustom" target="_blank" rel="noopener">[Code]</a>
           <a href="https://hunyuancustom.github.io/" target="_blank" rel="noopener">[Project]</a>
         </div>
+        </div>
       </div>
 
       <div class="pub">
+        <div class="pub-thumb"><img src="images/pubs/hunyuanportrait.jpg" alt="" loading="lazy" onerror="this.nextElementSibling.style.display='block';this.remove();"><span class="abbr">CVPR 2025</span></div>
+        <div class="pub-body">
         <div class="pub-title">HunyuanPortrait: Implicit Condition Control for Enhanced Portrait Animation</div>
         <div class="pub-authors">Zunnan Xu, <b>Zhentao Yu</b>, Zixiang Zhou, et al.</div>
         <div class="pub-venue">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2025</div>
@@ -260,9 +309,12 @@
           <a href="https://arxiv.org/abs/2503.18860" target="_blank" rel="noopener">[Paper]</a>
           <a href="https://kkakkkka.github.io/HunyuanPortrait" target="_blank" rel="noopener">[Project]</a>
         </div>
+        </div>
       </div>
 
       <div class="pub">
+        <div class="pub-thumb"><img src="images/pubs/hunyuanvideo.jpg" alt="" loading="lazy" onerror="this.nextElementSibling.style.display='block';this.remove();"><span class="abbr">Tech Report<br>2024</span></div>
+        <div class="pub-body">
         <div class="pub-title">HunyuanVideo: A Systematic Framework for Large Video Generative Models</div>
         <div class="pub-authors"><b>Tencent Hunyuan Team</b></div>
         <div class="pub-venue">Technical Report, 2024</div>
@@ -270,15 +322,19 @@
           <a href="https://arxiv.org/abs/2412.03603" target="_blank" rel="noopener">[Paper]</a>
           <a href="https://github.com/Tencent-Hunyuan/HunyuanVideo" target="_blank" rel="noopener">[Code]</a>
         </div>
+        </div>
       </div>
 
       <div class="pub">
+        <div class="pub-thumb"><img src="images/pubs/th-pad.jpg" alt="" loading="lazy" onerror="this.nextElementSibling.style.display='block';this.remove();"><span class="abbr">ICCV 2023</span></div>
+        <div class="pub-body">
         <div class="pub-title">Talking Head Generation with Probabilistic Audio-to-Visual Diffusion Priors</div>
         <div class="pub-authors"><b>Zhentao Yu</b>, Zixin Yin, Deyu Zhou, et al.</div>
         <div class="pub-venue">IEEE/CVF International Conference on Computer Vision (ICCV) 2023</div>
         <div class="pub-links">
           <a href="https://arxiv.org/abs/2212.04248" target="_blank" rel="noopener">[Paper]</a>
           <a href="https://zxyin.github.io/TH-PAD/" target="_blank" rel="noopener">[Project]</a>
+        </div>
         </div>
       </div>
     </section>
@@ -289,7 +345,7 @@
       <div class="entry">
         <div class="entry-main">
           <div class="org">Tencent Hunyuan</div>
-          <div class="role">Algorithm Researcher</div>
+          <div class="role">Senior Researcher</div>
           <div class="sub">Video World Model Team, Foundation Model Dept. (May 2026 – Present)</div>
           <div class="sub">Application Model Center, Multimodal Model Dept. (May 2024 – May 2026)</div>
         </div>
