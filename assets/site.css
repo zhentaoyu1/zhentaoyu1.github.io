@@ -40,6 +40,8 @@ h2 { font-size: 21px; font-weight: 600; padding-bottom: 7px; margin-bottom: 16px
 .older-news { margin-top: 8px; }
 .older-news summary { color: var(--muted); font-size: 12px; cursor: pointer; width: fit-content; }
 .older-news .news { margin-top: 9px; }
+.star-badge { display: inline-flex; align-items: center; gap: 3px; background: linear-gradient(135deg, #fef3c7, #fde68a); color: #92400e; padding: 0 7px; border-radius: 10px; font-size: 12px; font-weight: 600; line-height: 1.6; vertical-align: 1px; white-space: nowrap; }
+.star-badge svg { width: 11px; height: 11px; fill: currentColor; }
 .oral { font-size: inherit; font-weight: 600; color: #91402b; }
 .publication { display: grid; grid-template-columns: 165px minmax(0,1fr); align-items: start; gap: 20px; padding: 12px 0 18px; }
 .publication + .publication { padding-top: 16px; }
